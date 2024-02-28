@@ -1,11 +1,10 @@
 import asyncio
 from .ws import SimpleWS
-from websockets import serve
+from websockets import connect
 
-class SimpleWSServer(SimpleWS):
+class SimpleWSClient(SimpleWS):
     def __init__(self,
-                 host="",
-                 port=8765,
+                 uri="ws://localhost:8765",
                  on_connect=None,
                  on_close=None,
                  on_message=None,
@@ -17,15 +16,14 @@ class SimpleWSServer(SimpleWS):
                          on_message,
                          print_details,
                          print_messages)
-        self.host = host
-        self.port = port
-        
-    async def _main(self):
-        self.log("Starting server")        
-        async with serve(self._handler, self.host, self.port):
-            self.log(f"Server started at ws://{self.host}:{self.port}")
-            await asyncio.get_running_loop().create_future()  # run forever
-        self.log("Server stopped")
+        self.uri = uri
 
-    def serve(self):
+    async def _main(self):
+        self.log("Starting client")   
+        async with connect(self.uri) as websocket:
+            self.log(f"Connected to {self.uri}")
+            self._handler(websocket)
+        self.log("Client stopped")
+
+    def connect(self):
         asyncio.run(self._main())

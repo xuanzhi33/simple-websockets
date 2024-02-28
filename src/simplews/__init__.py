@@ -2,3 +2,5 @@
 #
 # SPDX-License-Identifier: GPL-3.0-only
 
+from .client import SimpleWSClient
+from .server import SimpleWSServer
