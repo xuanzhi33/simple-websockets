@@ -23,7 +23,7 @@ class SimpleWSServer(SimpleWS):
     async def _main(self):
         self.log("Starting server")        
         async with serve(self._handler, self.host, self.port):
-            self.log(f"Server started at ws://{self.host}:{self.port}")
+            self.log(f"Server started at port {self.port}")
             await asyncio.get_running_loop().create_future()  # run forever
         self.log("Server stopped")
 
