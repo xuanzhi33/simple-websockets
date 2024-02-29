@@ -35,3 +35,6 @@ Source = "https://github.com/xuanzhi33/simple-websockets"
 
 [tool.hatch.version]
 path = "src/simplews/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/simplews"]

@@ -26,7 +26,7 @@ pip install simple-websockets
 Here is a example of websocket echo server:
 
 ```python
-from simple_websockets import SimpleWSServer
+from simplews import SimpleWSServer
 
 server = SimpleWSServer(host="",
                         port=8765,
@@ -53,7 +53,7 @@ server.serve() # serve forever
 Here is a example of websocket client:
 
 ```python
-from simple_websockets import SimpleWSClient
+from simplews import SimpleWSClient
 client = SimpleWSClient(uri="ws://localhost:8765",
                         print_details=True, # Print basic logs
                         print_messages=True) # Print every message received
