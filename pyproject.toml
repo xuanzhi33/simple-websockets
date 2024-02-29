@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "simplews"
 dynamic = ["version"]
-description = 'Websocket server and client with callback-based API.'
+description = 'Simple websocket server and client with callback-based API.'
 readme = "README.md"
 requires-python = ">=3.8"
 license = "GPL-3.0-only"
