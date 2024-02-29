@@ -16,7 +16,7 @@ class SimpleWSClient(SimpleWS):
         self.log("Starting client")   
         async with connect(self.uri) as websocket:
             self.log(f"Connected to {self.uri}")
-            self._handler(websocket)
+            await self._handler(websocket)
         self.log("Client stopped")
 
     def connect(self):
