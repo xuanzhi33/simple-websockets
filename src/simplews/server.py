@@ -16,11 +16,13 @@ class SimpleWSServer(SimpleWS):
         self.port = port
         
     async def _main(self):
-        self.log("Starting server")        
-        async with serve(self._handler, self.host, self.port):
-            self.log(f"Server started at port {self.port}")
-            await asyncio.get_running_loop().create_future()  # run forever
-        self.log("Server stopped")
+        self.log("Starting server")
+        try:
+            async with serve(self._handler, self.host, self.port):
+                self.log(f"Server started at port {self.port}")
+                await asyncio.get_running_loop().create_future()  # run forever
+        except asyncio.CancelledError:
+            self.log("Server stopped")
 
     def broadcast(self, clients, message):
         ws_broadcast(clients, message)
