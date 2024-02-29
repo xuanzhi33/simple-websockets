@@ -73,6 +73,13 @@ async def on_close(ws): # called when the connection is closed
 client.connect() # connect to the server
 ```
 
+## Tips
+
+- All callbacks are **asynchronous**, so don't forget `async`.
+- ws.send() is a coroutine, so don't forget `await`.
+- For more information about the `ws` argument, see [WebSocketServerProtocol](https://websockets.readthedocs.io/en/stable/reference/asyncio/server.html#websockets.server.WebSocketServerProtocol) for server and [WebSocketClientProtocol](https://websockets.readthedocs.io/en/stable/reference/asyncio/client.html#websockets.client.WebSocketClientProtocol) for client.
+- server.broadcast() is the preferred way to send a message to all connected clients, and it's not a coroutine, so no `await` is needed.
+
 ## License
 
 `simple-websockets` is distributed under the terms of the [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html) license.
