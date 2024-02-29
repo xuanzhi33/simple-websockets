@@ -1,9 +1,9 @@
-# simpleWS
+# simple-websockets
 
 Simple websocket server and client with callback-based API.
 
-[![PyPI - Version](https://img.shields.io/pypi/v/simplews.svg)](https://pypi.org/project/simplews)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/simplews.svg)](https://pypi.org/project/simplews)
+[![PyPI - Version](https://img.shields.io/pypi/v/simple-websockets.svg)](https://pypi.org/project/simple-websockets)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/simple-websockets.svg)](https://pypi.org/project/simple-websockets)
 
 -----
 
@@ -16,7 +16,7 @@ Simple websocket server and client with callback-based API.
 ## Installation
 
 ```console
-pip install simplews
+pip install simple-websockets
 ```
 
 ## Usage
@@ -75,4 +75,4 @@ client.connect() # connect to the server
 
 ## License
 
-`simplews` is distributed under the terms of the [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html) license.
+`simple-websockets` is distributed under the terms of the [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html) license.

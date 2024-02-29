@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "simplews"
+name = "simple-websockets"
 dynamic = ["version"]
 description = 'Simple websocket server and client with callback-based API.'
 readme = "README.md"
@@ -29,9 +29,9 @@ dependencies = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/xuanzhi33/simplews#readme"
-Issues = "https://github.com/xuanzhi33/simplews/issues"
-Source = "https://github.com/xuanzhi33/simplews"
+Documentation = "https://github.com/xuanzhi33/simple-websockets#readme"
+Issues = "https://github.com/xuanzhi33/simple-websockets/issues"
+Source = "https://github.com/xuanzhi33/simple-websockets"
 
 [tool.hatch.version]
 path = "src/simplews/__about__.py"

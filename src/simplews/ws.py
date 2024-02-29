@@ -14,7 +14,7 @@ class SimpleWS:
     def log(self, message):
         if self.print_details:
             current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            print(f"[SimpleWS] [{current_datetime}] {message}")
+            print(f"[Simple Websockets] [{current_datetime}] {message}")
 
     async def _on_connect(self, websocket):
         self.log(f"Connected: {websocket.remote_address}")
