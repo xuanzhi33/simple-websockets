@@ -18,6 +18,7 @@ Websocket server and client with callback-based API.
 pip install simplews
 ```
 
+
 ## License
 
 `simplews` is distributed under the terms of the [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html) license.

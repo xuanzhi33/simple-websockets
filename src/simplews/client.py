@@ -5,16 +5,10 @@ from websockets import connect
 class SimpleWSClient(SimpleWS):
     def __init__(self,
                  uri="ws://localhost:8765",
-                 on_connect=None,
-                 on_close=None,
-                 on_message=None,
                  print_details=True,
                  print_messages=True):
         
-        super().__init__(on_connect,
-                         on_close,
-                         on_message,
-                         print_details,
+        super().__init__(print_details,
                          print_messages)
         self.uri = uri
 
