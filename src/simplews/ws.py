@@ -25,9 +25,10 @@ class SimpleWS:
         if self.on_close_callback:
             await self.on_close_callback(websocket)
     async def _on_message(self, websocket, message):
-        if not self.print_messages:
-            message = "Message received"
-        self.log(f"Message from {websocket.remote_address}: {message}")
+        if self.print_messages:
+            self.log(f"Message from {websocket.remote_address}: {message}")
+        else:
+            self.log(f"Message from {websocket.remote_address}")
         if self.on_message_callback:
             await self.on_message_callback(websocket, message)
 
